@@ -9,6 +9,9 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+
+<input type="text" id="Search" placeholder="Search" class="form-control" />
+
 <table class="table">
     <thead>
         <tr>
@@ -32,7 +35,7 @@
     </thead>
     <tbody>
 @foreach (var item in Model) {
-        <tr>
+        <tr class="Search">
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
@@ -57,3 +60,6 @@
 }
     </tbody>
 </table>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/js/search.js"></script>
+
